@@ -1,0 +1,108 @@
+{
+  "schema_version": "appfactory.source_readback.v1",
+  "generated_at": "2026-07-08T23:04:09.960492+08:00",
+  "source_files": [
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicApp.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicViews.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicStore.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LocalTriageEngine.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/Models.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Tests/LeafClinicWalkthroughTests/LeafClinicStoreTests.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/ios/package_manifest.json"
+  ],
+  "requirement_results": [
+    {
+      "requirement_id": "REQ-CRUD-001",
+      "status": "pass",
+      "source_markers": [
+        "createCase",
+        "updateCareStep",
+        "deleteCase",
+        "Delete this leaf check?"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-PERSIST-001",
+      "status": "pass",
+      "source_markers": [
+        "FileLeafClinicPersistence",
+        "JSONEncoder",
+        "testPersistenceSurvivesStoreReopen"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-VIS-001",
+      "status": "pass",
+      "source_markers": [
+        "LeafHeroCard",
+        "SeverityRing",
+        "BotanicalEmptyState",
+        "leafAccent"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-EMPTY-001",
+      "status": "pass",
+      "source_markers": [
+        "No leaf checks yet.",
+        "Start a Leaf Check"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-ERROR-001",
+      "status": "pass",
+      "source_markers": [
+        "missingPlantNickname",
+        "ErrorBanner",
+        "testMissingNicknameSurfacesRecoverableError"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-PRIVACY-001",
+      "status": "pass",
+      "source_markers": [
+        "Photo stays local",
+        "No network upload",
+        "local by default"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-PREMIUM-001",
+      "status": "pass",
+      "source_markers": [
+        "PremiumStoreKitBoundary",
+        "StoreKit products are not configured",
+        "app_store_connect_iap_evidence_missing"
+      ],
+      "missing_markers": []
+    },
+    {
+      "requirement_id": "REQ-AI-001",
+      "status": "pass",
+      "source_markers": [
+        "LocalTriageEngine",
+        "Review before saving.",
+        "isSkipped",
+        "not a professional diagnosis"
+      ],
+      "missing_markers": []
+    }
+  ],
+  "network_secret_scan": {
+    "command": "rg -n \"https?://|Kimi|API_KEY|backend|URLSession\" Sources Tests ios",
+    "finding": "no backend/login/cloud implementation; Kimi only appears in local privacy/manifest boundary copy"
+  },
+  "en_us_copy_lock": {
+    "manifest": "ios/package_manifest.json",
+    "localization": "en-US"
+  },
+  "blockers": [
+    "app_store_connect_iap_evidence_missing"
+  ]
+}

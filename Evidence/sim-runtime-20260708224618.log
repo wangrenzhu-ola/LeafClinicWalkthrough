@@ -1,0 +1,18 @@
+runtime_check_started=2026-07-08T22:46:18+08:00
+simulator_udid=BBB7317F-76C6-4BD5-BF4B-EF6ABAEBA1F8
+app_path=.build/xcode-derived/Build/Products/Debug-iphonesimulator/LeafClinicWalkthrough.app
+Monitoring boot status for iPhone 17 (BBB7317F-76C6-4BD5-BF4B-EF6ABAEBA1F8).
+[2026-07-08 14:46:26 +0000] Status=4, isTerminal=NO, Elapsed=00:07.
+	Waiting on System App
+
+[2026-07-08 14:46:28 +0000] Status=4, isTerminal=NO, Elapsed=00:09.
+	Waiting on System App
+
+[2026-07-08 14:46:30 +0000] Status=4294967295, isTerminal=YES, Elapsed=00:10.
+	Finished
+
+com.appfactory.leafclinicwalkthrough: 69654
+Detected file type from extension: PNG
+Note: No display specified. Defaulting to display: 710FFF5C-3A27-4CA0-9230-55FDFE11D87D (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-runtime-home.png
+runtime_check_finished=2026-07-08T22:46:45+08:00

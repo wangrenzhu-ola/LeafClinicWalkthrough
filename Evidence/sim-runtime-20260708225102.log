@@ -1,0 +1,11 @@
+timestamp=20260708225102
+simulator=== Devices == -- iOS 26.4 -- -- iOS 26.5 -- iPhone 17 Pro (93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA) (Booted) 
+app=.build/xcode-derived-leaf-20260708225041/Build/Products/Debug-iphonesimulator/LeafClinicWalkthrough.app
+--- install
+--- launch
+com.appfactory.leafclinicwalkthrough: 65079
+--- screenshot
+Detected file type from extension: PNG
+Note: No display specified. Defaulting to display: 6EC1262F-389F-436F-855C-FBE311E8B65C (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-runtime-20260708225102.png
+screenshot=Evidence/leafclinic-runtime-20260708225102.png

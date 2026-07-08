@@ -162,7 +162,7 @@ private struct LeafHeroCard: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Turn one stressed leaf into a recovery plan.")
                         .font(.title2.bold())
-                        .foregroundStyle(.leafInk)
+                        .foregroundStyle(Color.leafInk)
                     Text("Record the symptom, review local suggestions, and revisit the same leaf in seven days.")
                         .font(.callout)
                         .foregroundStyle(.secondary)
@@ -192,7 +192,7 @@ private struct BotanicalEmptyState: View {
                 .accessibilityLabel("Empty leaf archive illustration")
             Text("No leaf checks yet.")
                 .font(.title3.bold())
-                .foregroundStyle(.leafInk)
+                .foregroundStyle(Color.leafInk)
             Text("Start with the leaf that worries you most. You can save a draft after naming the plant.")
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
@@ -216,7 +216,7 @@ private struct LeafIntakeView: View {
             Section("Plant") {
                 TextField("Plant nickname", text: $draft.plantNickname)
                     .focused($focusedField, equals: .nickname)
-                    .textInputAutocapitalization(.words)
+                    .leafClinicTextInputAutocapitalization()
                     .accessibilityLabel("Plant nickname")
                 Text(draft.isComplete ? "Draft ready for triage" : "Unsaved draft: add a plant nickname before saving.")
                     .font(.caption)
@@ -254,7 +254,7 @@ private struct LeafIntakeView: View {
                 HStack {
                     Image(systemName: "photo.on.rectangle.angled")
                         .font(.largeTitle)
-                        .foregroundStyle(.leafAccent)
+                        .foregroundStyle(Color.leafAccent)
                     Text("Photo stays local. This rough build records a placeholder reference instead of uploading images.")
                 }
                 .accessibilityLabel("Local photo placeholder")
@@ -350,9 +350,11 @@ private struct RecoveryWalkthroughView: View {
                             .foregroundStyle(.secondary)
                         Text("Recovery plan saved.")
                             .font(.caption.bold())
-                            .foregroundStyle(.leafAccent)
+                            .foregroundStyle(Color.leafAccent)
                     }
                 }
+                CaseDetailEditCard(plantCase: plantCase, store: store)
+                    .id(plantCase.id)
                 ForEach(plantCase.careSteps) { step in
                     HStack(alignment: .top, spacing: 12) {
                         Button { try? store.toggleStep(caseId: plantCase.id, stepId: step.id) } label: {
@@ -387,6 +389,87 @@ private struct RecoveryWalkthroughView: View {
         }
         .background(Color.leafBackground.ignoresSafeArea())
         .navigationTitle("Recovery")
+    }
+}
+
+private struct CaseDetailEditCard: View {
+    let plantCase: PlantCase
+    @ObservedObject var store: LeafClinicStore
+    @State private var plantNickname: String
+    @State private var symptomType: SymptomType
+    @State private var severity: Double
+    @State private var moistureContext: String
+    @State private var lightContext: String
+    @State private var soilContext: String
+    @State private var note: String
+    @State private var saveCopy = "Edit symptom and context, then save changes."
+
+    init(plantCase: PlantCase, store: LeafClinicStore) {
+        self.plantCase = plantCase
+        self.store = store
+        _plantNickname = State(initialValue: plantCase.plantNickname)
+        _symptomType = State(initialValue: plantCase.symptomType)
+        _severity = State(initialValue: plantCase.severity)
+        _moistureContext = State(initialValue: plantCase.snapshot.moistureContext)
+        _lightContext = State(initialValue: plantCase.snapshot.lightContext)
+        _soilContext = State(initialValue: plantCase.snapshot.soilContext)
+        _note = State(initialValue: plantCase.snapshot.note)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Edit case details", subtitle: "Update the plant, symptom, and context without losing the saved recovery path.")
+            TextField("Plant nickname", text: $plantNickname)
+                .leafClinicTextInputAutocapitalization()
+                .accessibilityLabel("Edit plant nickname")
+            Picker("Symptom", selection: $symptomType) {
+                ForEach(SymptomType.allCases) { symptom in
+                    Text(symptom.label).tag(symptom)
+                }
+            }
+            .pickerStyle(.segmented)
+            .accessibilityLabel("Edit leaf symptom")
+            VStack(alignment: .leading) {
+                Text("Severity")
+                Slider(value: $severity, in: 0...1) { Text("Edit leaf severity") }
+                Text("\(Int((severity * 100).rounded()))% stressed")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            TextField("Moisture context", text: $moistureContext, axis: .vertical)
+                .accessibilityLabel("Edit moisture context")
+            TextField("Light context", text: $lightContext, axis: .vertical)
+                .accessibilityLabel("Edit light context")
+            TextField("Soil context", text: $soilContext, axis: .vertical)
+                .accessibilityLabel("Edit soil context")
+            TextField("Leaf note", text: $note, axis: .vertical)
+                .accessibilityLabel("Edit leaf note")
+            Button("Save Case Changes", action: saveChanges)
+                .buttonStyle(.borderedProminent)
+                .accessibilityLabel("Save case changes")
+            Text(saveCopy)
+                .font(.caption)
+                .foregroundStyle(saveCopy == "Case changes saved." ? Color.leafAccent : .secondary)
+        }
+        .padding(16)
+        .background(RoundedRectangle(cornerRadius: 22).fill(Color.leafCard.opacity(0.92)))
+    }
+
+    private func saveChanges() {
+        var updated = plantCase
+        updated.plantNickname = plantNickname
+        updated.symptomType = symptomType
+        updated.severity = severity
+        updated.snapshot.moistureContext = moistureContext
+        updated.snapshot.lightContext = lightContext
+        updated.snapshot.soilContext = soilContext
+        updated.snapshot.note = note
+        do {
+            try store.updateCase(updated)
+            saveCopy = "Case changes saved."
+        } catch {
+            saveCopy = store.lastErrorMessage ?? "The case could not be saved. Check the plant nickname and try again."
+        }
     }
 }
 
@@ -481,7 +564,7 @@ private struct PremiumPrivacyCard: View {
             Divider()
             Label("Local privacy boundary", systemImage: "lock.shield")
                 .font(.headline)
-            Text("Plant photos and notes stay on this device by default. Future cloud or Kimi help must be opt-in before anything leaves the app.")
+            Text("Plant photos and notes stay on this device by default. No network upload is used in this version. Future cloud or Kimi help must be opt-in before anything leaves the app.")
                 .font(.callout)
         }
         .accessibilityLabel("Premium unavailable and local privacy notice")
@@ -518,7 +601,7 @@ private struct ErrorBanner: View {
     var body: some View {
         Label(message, systemImage: "exclamationmark.triangle.fill")
             .font(.callout)
-            .foregroundStyle(.amberWarning)
+            .foregroundStyle(Color.amberWarning)
             .padding(12)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 16).fill(Color.amberWarning.opacity(0.12)))
@@ -548,7 +631,7 @@ private struct SectionHeader: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(title).font(.title3.bold()).foregroundStyle(.leafInk)
+            Text(title).font(.title3.bold()).foregroundStyle(Color.leafInk)
             Text(subtitle).font(.callout).foregroundStyle(.secondary)
         }
     }
@@ -561,7 +644,7 @@ private struct LeafLineArt: View {
                 .fill(LinearGradient(colors: [.leafAccent.opacity(0.22), .creamCard], startPoint: .topLeading, endPoint: .bottomTrailing))
             Image(systemName: "leaf.fill")
                 .font(.system(size: 54, weight: .light))
-                .foregroundStyle(.leafAccent)
+                .foregroundStyle(Color.leafAccent)
             Image(systemName: "line.diagonal")
                 .font(.system(size: 32, weight: .thin))
                 .foregroundStyle(.white.opacity(0.55))
@@ -581,7 +664,7 @@ private struct SeverityRing: View {
                 .rotationEffect(.degrees(-90))
             Text("\(Int((progress * 100).rounded()))%")
                 .font(.caption.bold())
-                .foregroundStyle(.leafInk)
+                .foregroundStyle(Color.leafInk)
         }
     }
 }
@@ -593,4 +676,14 @@ private extension Color {
     static let leafAccent = Color(red: 0.22, green: 0.48, blue: 0.34)
     static let leafInk = Color(red: 0.12, green: 0.19, blue: 0.15)
     static let amberWarning = Color(red: 0.82, green: 0.46, blue: 0.16)
+}
+private extension View {
+    @ViewBuilder
+    func leafClinicTextInputAutocapitalization() -> some View {
+        #if os(iOS)
+        self.textInputAutocapitalization(.words)
+        #else
+        self
+        #endif
+    }
 }

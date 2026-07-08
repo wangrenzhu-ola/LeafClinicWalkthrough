@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		MAINAPP0000000000000001 /* LeafClinicWalkthroughMainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = APPFIL0000000000000001 /* LeafClinicWalkthroughMainApp.swift */; };
+		BUILDFILE00000000000002 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILEREF00000000000002 /* Models.swift */; };
+		BUILDFILE00000000000003 /* LocalTriageEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILEREF00000000000003 /* LocalTriageEngine.swift */; };
+		BUILDFILE00000000000004 /* LeafClinicStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILEREF00000000000004 /* LeafClinicStore.swift */; };
+		BUILDFILE00000000000005 /* LeafClinicViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILEREF00000000000005 /* LeafClinicViews.swift */; };
+		BUILDFILE00000000000006 /* LeafClinicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILEREF00000000000006 /* LeafClinicApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		APPFIL0000000000000001 /* LeafClinicWalkthroughMainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafClinicWalkthroughMainApp.swift; sourceTree = "<group>"; };
+		FILEREF00000000000002 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FILEREF00000000000003 /* LocalTriageEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTriageEngine.swift; sourceTree = "<group>"; };
+		FILEREF00000000000004 /* LeafClinicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafClinicStore.swift; sourceTree = "<group>"; };
+		FILEREF00000000000005 /* LeafClinicViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafClinicViews.swift; sourceTree = "<group>"; };
+		FILEREF00000000000006 /* LeafClinicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafClinicApp.swift; sourceTree = "<group>"; };
+		PRODREF000000000000001 /* LeafClinicWalkthrough.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeafClinicWalkthrough.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FRAMEWORKPHASE000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		MAINGROUP0000000000001 = {
+			isa = PBXGroup;
+			children = (
+				APPGRP0000000000000001 /* LeafClinicWalkthroughApp */,
+				SRCGRP0000000000000001 /* Sources */,
+				PRODUCTSGROUP000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		APPGRP0000000000000001 /* LeafClinicWalkthroughApp */ = {
+			isa = PBXGroup;
+			children = (
+				APPFIL0000000000000001 /* LeafClinicWalkthroughMainApp.swift */,
+			);
+			path = LeafClinicWalkthroughApp;
+			sourceTree = "<group>";
+		};
+		SRCGRP0000000000000001 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FILEREF00000000000002 /* Models.swift */,
+				FILEREF00000000000003 /* LocalTriageEngine.swift */,
+				FILEREF00000000000004 /* LeafClinicStore.swift */,
+				FILEREF00000000000005 /* LeafClinicViews.swift */,
+				FILEREF00000000000006 /* LeafClinicApp.swift */,
+			);
+			path = Sources/LeafClinicWalkthrough;
+			sourceTree = "<group>";
+		};
+		PRODUCTSGROUP000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PRODREF000000000000001 /* LeafClinicWalkthrough.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TARGET0000000000000001 /* LeafClinicWalkthrough */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TARGETCONFIGLIST000001 /* Build configuration list for PBXNativeTarget "LeafClinicWalkthrough" */;
+			buildPhases = (
+				SOURCESPHASE0000000001 /* Sources */,
+				FRAMEWORKPHASE000000001 /* Frameworks */,
+				RESOURCEPHASE0000000001 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = LeafClinicWalkthrough;
+			productName = LeafClinicWalkthrough;
+			productReference = PRODREF000000000000001 /* LeafClinicWalkthrough.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PROJECT000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					TARGET0000000000000001 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = PROJECTCONFIGLIST000001 /* Build configuration list for PBXProject "LeafClinicWalkthrough" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = MAINGROUP0000000000001;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = PRODUCTSGROUP000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TARGET0000000000000001 /* LeafClinicWalkthrough */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		RESOURCEPHASE0000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SOURCESPHASE0000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MAINAPP0000000000000001 /* LeafClinicWalkthroughMainApp.swift in Sources */,
+				BUILDFILE00000000000002 /* Models.swift in Sources */,
+				BUILDFILE00000000000003 /* LocalTriageEngine.swift in Sources */,
+				BUILDFILE00000000000004 /* LeafClinicStore.swift in Sources */,
+				BUILDFILE00000000000005 /* LeafClinicViews.swift in Sources */,
+				BUILDFILE00000000000006 /* LeafClinicApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		PROJECTDEBUGCONFIG00001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)");
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		PROJECTRELEASECONFIG0001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		TARGETDEBUGCONFIG000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Leaf Clinic";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.leafclinicwalkthrough;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		TARGETRELEASECONFIG0001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Leaf Clinic";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appfactory.leafclinicwalkthrough;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		PROJECTCONFIGLIST000001 /* Build configuration list for PBXProject "LeafClinicWalkthrough" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				PROJECTDEBUGCONFIG00001 /* Debug */,
+				PROJECTRELEASECONFIG0001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		TARGETCONFIGLIST000001 /* Build configuration list for PBXNativeTarget "LeafClinicWalkthrough" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TARGETDEBUGCONFIG000001 /* Debug */,
+				TARGETRELEASECONFIG0001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PROJECT000000000000001 /* Project object */;
+}

@@ -1,0 +1,360 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme LeafClinicWalkthrough -destination generic/platform=iOS build
+
+Resolve Package Graph
+2026-07-08 22:36:02.193 xcodebuild[45804:268405045] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+
+
+Resolved source packages:
+  LeafClinicWalkthrough: /Users/wangrenzhu/work/LeafClinicWalkthrough
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'LeafClinicWalkthrough' in project 'LeafClinicWalkthrough'
+        ➜ Explicit dependency on target 'LeafClinicWalkthrough' in project 'LeafClinicWalkthrough'
+        ➜ Explicit dependency on target 'LeafClinicWalkthrough_LeafClinicWalkthrough' in project 'LeafClinicWalkthrough'
+    Target 'LeafClinicWalkthrough' in project 'LeafClinicWalkthrough'
+        ➜ Explicit dependency on target 'LeafClinicWalkthrough_LeafClinicWalkthrough' in project 'LeafClinicWalkthrough'
+    Target 'LeafClinicWalkthrough_LeafClinicWalkthrough' in project 'LeafClinicWalkthrough' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 5094d789b0fdd4a3a96c43a18ed538b9
+Build description path: /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/XCBuildData/5094d789b0fdd4a3a96c43a18ed538b9.xcbuilddata
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products
+
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -o /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache
+
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos
+
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos
+
+CreateBuildDirectory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/PackageFrameworks
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-create-build-directory /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/PackageFrameworks
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/empty-LeafClinicWalkthrough_LeafClinicWalkthrough.plist (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/empty-LeafClinicWalkthrough_LeafClinicWalkthrough.plist
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/LeafClinicWalkthrough_LeafClinicWalkthrough.DependencyStaticMetadataFileList (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/LeafClinicWalkthrough_LeafClinicWalkthrough.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.LinkFileList (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.LinkFileList
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_const_extract_protocols.json (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftFileList (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftFileList
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-OutputFileMap.json (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/LeafClinicWalkthrough_LeafClinicWalkthrough.DependencyMetadataFileList (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/LeafClinicWalkthrough_LeafClinicWalkthrough.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftConstValuesFileList (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.modulemap (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.modulemap
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.DependencyMetadataFileList (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.DependencyStaticMetadataFileList (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.DependencyStaticMetadataFileList
+
+MkDir /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    /bin/mkdir -p /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle
+
+WriteAuxiliaryFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/resource_bundle_accessor.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    write-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/resource_bundle_accessor.swift
+
+Copy /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/LeafClinicWalkthrough.modulemap /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.modulemap (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.modulemap /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos
+
+ProcessInfoPlistFile /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle/Info.plist /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/empty-LeafClinicWalkthrough_LeafClinicWalkthrough.plist (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-infoPlistUtility /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.build/empty-LeafClinicWalkthrough_LeafClinicWalkthrough.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphoneos -requiredArchitecture arm64 -o /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle/Info.plist
+
+CpResource /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle/Resources /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/Resources (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/Resources /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle
+
+RegisterExecutionPolicyException /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-RegisterExecutionPolicyException /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle
+
+Touch /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle (in target 'LeafClinicWalkthrough_LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    /usr/bin/touch -c /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough_LeafClinicWalkthrough.bundle
+
+SwiftDriver LeafClinicWalkthrough normal arm64 com.apple.xcode.tools.swift.compiler (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name LeafClinicWalkthrough -Onone @/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/Developer/Library/Frameworks -emit-localized-strings -emit-localized-strings-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache -output-file-map /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name leafclinicwalkthrough -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_const_extract_protocols.json -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/include -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources-normal/arm64 -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/arm64 -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-Swift.h -working-directory /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/SwiftShims-CT8I21TCJM4SXI3G7AI5GLJOR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_stdarg-7XP82MTH49IRPCPUOG8VXDZTA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_SwiftConcurrencyShims-9LE3YB7LIDV6C2U9ZT1Q2RZL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_float-5QUHAKAKX1D9FLGHLOJABONO3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_stdbool-EKAR0O6XKYSJ3BNVEX1PE80UA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/ptrcheck-459LSRNF7523NKYMF2JD4XLFK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_AvailabilityInternal-DXJ2DOOD3PGYJ8VAUAVBSUWMM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_stddef-70KCMK0FIJO943R8GSGYARPWT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/ptrauth-CPZ9EK0TNDD9OCOTONIXMNE1A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/DeveloperToolsSupport-8MMZ9XC0P6DSMA9PYS9SFKCA2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_DarwinFoundation1-C8VDD9VRVCJA2IGKQZ9V6VIHA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_DarwinFoundation2-DVMCGIXB2N1Q5KLWCE6MYCSTE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_limits-4MSBA2GRHO8H1GAIDVUO28TMY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/sys_types-73YZSUPF5LKFOI47L0EDHX99O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_stdint-C0PT2T1F4WIG2T760DGV2GKPM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_tgmath-11833L5QV3NSMLEWOUO8YWGYA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_DarwinFoundation3-25PWAWA1G66EPOYFXDP3G5S7J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_intrinsics-6S7MG6ZBQ6DBK3QPIFJ96YYJ2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_stdatomic-35LVBCY4CASH8LAIC11SA5B11.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/_Builtin_inttypes-9BT80JNVO9ISQVGUDZ7M14AYZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Darwin-DFH55CR31O9PFQ0LHE1CHTRQO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/simd-BEC5APTTCTQX4UX9NB260JJZT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/MachO-6566RKSU499L0XZQGYD8G62L5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/ObjectiveC-5KAO4UKE92L4NKPXQUR6K4R5P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/os_object-618Q6B7YKP3LSXM42L3ONC254.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/os_workgroup-D3FMHYTWCSZR5Y5ZB03LO8QMC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Spatial-DD1VWP5FB8M6PQWLVH857969A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Dispatch-63AF8QAKS0VH9CIEV6DUI3JJJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/XPC-8E79VF5JAGIT7B4ZU779I3R46.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreFoundation-14U4TJOXBKD7V0Q1YNLS7POLS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/os-90IC9OBR3X96NXVAACOE1DLH5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Security-9SESFNZCHA4QAW8QHRL9H6PFQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreGraphics-CB5NV33LG5XLYYK2V93S2G0TM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CFNetwork-9WD0MRPZQKU6BM0BK2EFJNWHE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Foundation-EFI4V9WU0YLYYYUAK23W6UWAL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/ImageIO-9JNYEFEGCQL21YBCIDED3OZKD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreText-IOWNKLVOSTRP6XJENSW2Z5HA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/UniformTypeIdentifiers-BEQMA7Y1QFZ26FDLQ10ZWY35Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreTransferable-3YMTLI997ZWFC5DV083H1P2TI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/FileProvider-CCOTKC6L9H449S2EM7IR9TVDV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/OSLog-ARDKQG36CWZI87WKHL50DQ3M4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Accessibility-9GJQLXXAIMZS91AHJ2G2BSAMB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/UserNotifications-AIZH356MU6VCC044N6FPNIPH7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/DataDetection-6M5R1TUDPPUDT1NOL21KECSEU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreData-AJZW5G9PMMYK02SV64XYLT3UG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Symbols-6FY3XP0TLDD0AAO527RC8KJOF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/UIUtilities-B29RA44JB1JF2M0DSLYB0HOYV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/IOSurface-7CH7HL2WVMA98F6E8AUGPVSMF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/OpenGLES-ETE79U20PQU6W1YZDAP6VSZ9J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Metal-8WGYYLT9VCNO5H4VRKJZ8X2TA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreVideo-E1PS7RPNEB0JODKDZUANET5VC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/QuartzCore-2UVH9QCHHRN4OMUJOTKRKJST2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/CoreImage-9FKOX3RFF3LI7ZCYAKAZ0FLCT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/SwiftUICore-1KSMURC4VMVLCTJ2FX6L2IDUP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/UIKit-95KP4H8Z7Z9GLNFRGHKC1JZHK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/SwiftUI-E4OQUCANO7HP96KHVCLCMVB88.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ LeafClinicWalkthrough (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+EmitSwiftModule normal arm64 (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ LeafClinicApp.swift /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicApp.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+SwiftCompile normal arm64 /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicApp.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ LeafClinicStore.swift /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicStore.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftCompile normal arm64 /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicStore.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ Models.swift /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/Models.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftCompile normal arm64 /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/Models.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ resource_bundle_accessor.swift /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/resource_bundle_accessor.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftCompile normal arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/resource_bundle_accessor.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ LocalTriageEngine.swift /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LocalTriageEngine.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftCompile normal arm64 /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LocalTriageEngine.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftCompile normal arm64 Compiling\ LeafClinicViews.swift /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicViews.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+SwiftCompile normal arm64 /Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicViews.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for LeafClinicWalkthrough (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriver\ Compilation\ Requirements LeafClinicWalkthrough normal arm64 com.apple.xcode.tools.swift.compiler (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name LeafClinicWalkthrough -Onone @/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/Developer/Library/Frameworks -emit-localized-strings -emit-localized-strings-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache -output-file-map /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name leafclinicwalkthrough -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_const_extract_protocols.json -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/include -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources-normal/arm64 -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/arm64 -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-Swift.h -working-directory /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/LeafClinicWalkthrough-Swift.h /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-Swift.h (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-swiftHeaderTool -arch arm64 /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-Swift.h -o /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/LeafClinicWalkthrough-Swift.h
+
+Copy /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/arm64-apple-ios.swiftdoc /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftdoc (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftdoc /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/arm64-apple-ios.swiftdoc
+
+Copy /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/arm64-apple-ios.swiftmodule /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftmodule (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftmodule /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/arm64-apple-ios.swiftmodule
+
+Copy /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/arm64-apple-ios.abi.json /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.abi.json (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.abi.json /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/arm64-apple-ios.abi.json
+
+Copy /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftsourceinfo (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftsourceinfo /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling LocalTriageEngine.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriverJobDiscovery normal arm64 Compiling resource_bundle_accessor.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Models.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriverJobDiscovery normal arm64 Compiling LeafClinicStore.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriverJobDiscovery normal arm64 Compiling LeafClinicApp.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriverJobDiscovery normal arm64 Compiling LeafClinicViews.swift (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+
+SwiftDriver\ Compilation LeafClinicWalkthrough normal arm64 com.apple.xcode.tools.swift.compiler (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name LeafClinicWalkthrough -Onone @/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib -F /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/Developer/Library/Frameworks -emit-localized-strings -emit-localized-strings-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos26.5-23F81a-32daed1954a7d5dd0789fcaf2a9bb78b.sdkstatcache -output-file-map /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -package-name leafclinicwalkthrough -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_const_extract_protocols.json -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/include -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources-normal/arm64 -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources/arm64 -Xcc -I/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-Swift.h -working-directory /Users/wangrenzhu/work/LeafClinicWalkthrough/.swiftpm/xcode -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.o normal (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0 -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk -O0 -F/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos -F/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/Developer/Library/Frameworks -filelist /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_lto.o -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.swiftmodule @/Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough-linker-args.resp -o /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.o
+
+ExtractAppIntentsMetadata (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name LeafClinicWalkthrough --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier leafclinicwalkthrough.LeafClinicWalkthrough --output /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.appintents --target-triple arm64-apple-ios17.0 --binary-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.o --dependency-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough_dependency_info.dat --stringsdata-file /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftFileList --metadata-file-list /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.DependencyMetadataFileList --static-metadata-file-list /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/LeafClinicWalkthrough.DependencyStaticMetadataFileList --swift-const-vals-list /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Intermediates.noindex/LeafClinicWalkthrough.build/Debug-iphoneos/LeafClinicWalkthrough.build/Objects-normal/arm64/LeafClinicWalkthrough.SwiftConstValuesFileList --force --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-07-08 22:36:08.419 appintentsmetadataprocessor[48959:268409131] Starting appintentsmetadataprocessor export
+2026-07-08 22:36:08.440 appintentsmetadataprocessor[48959:268409131] Extracted no relevant App Intents symbols, skipping writing output
+
+RegisterExecutionPolicyException /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.o (in target 'LeafClinicWalkthrough' from project 'LeafClinicWalkthrough')
+    cd /Users/wangrenzhu/work/LeafClinicWalkthrough
+    builtin-RegisterExecutionPolicyException /Users/wangrenzhu/Library/Developer/Xcode/DerivedData/LeafClinicWalkthrough-gzkuklvasbleodahvoyfnyujttof/Build/Products/Debug-iphoneos/LeafClinicWalkthrough.o
+
+** BUILD SUCCEEDED **
+

@@ -145,6 +145,10 @@ public final class LeafClinicStore: ObservableObject {
     }
 
     public func updateCase(_ plantCase: PlantCase) throws {
+        guard !plantCase.plantNickname.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            lastErrorMessage = LeafClinicError.missingPlantNickname.errorDescription
+            throw LeafClinicError.missingPlantNickname
+        }
         guard let index = cases.firstIndex(where: { $0.id == plantCase.id }) else {
             lastErrorMessage = LeafClinicError.caseNotFound.errorDescription
             throw LeafClinicError.caseNotFound

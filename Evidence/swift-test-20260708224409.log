@@ -1,0 +1,25 @@
+[0/1] Planning build
+Building for debugging...
+[0/4] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (1.84s)
+Test Suite 'All tests' started at 2026-07-08 22:44:19.942.
+Test Suite 'LeafClinicWalkthroughPackageTests.xctest' started at 2026-07-08 22:44:19.947.
+Test Suite 'LeafClinicStoreTests' started at 2026-07-08 22:44:19.948.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testCreateEditAndDeletePlantCase]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testCreateEditAndDeletePlantCase]' passed (0.010 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testLocalTriageIsEditableSkippableAndConfirmable]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testLocalTriageIsEditableSkippableAndConfirmable]' passed (0.002 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testMissingNicknameSurfacesRecoverableError]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testMissingNicknameSurfacesRecoverableError]' passed (0.001 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPersistenceSurvivesStoreReopen]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPersistenceSurvivesStoreReopen]' passed (0.002 seconds).
+Test Suite 'LeafClinicStoreTests' passed at 2026-07-08 22:44:19.964.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.015 (0.016) seconds
+Test Suite 'LeafClinicWalkthroughPackageTests.xctest' passed at 2026-07-08 22:44:19.964.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.015 (0.016) seconds
+Test Suite 'All tests' passed at 2026-07-08 22:44:19.964.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.015 (0.021) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

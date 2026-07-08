@@ -1,0 +1,39 @@
+Building for debugging...
+[0/7] Write sources
+[1/7] Write swift-version--58304C5D6DBC2206.txt
+[3/9] Compiling LeafClinicWalkthrough LeafClinicViews.swift
+[4/9] Emitting module LeafClinicWalkthrough
+[5/10] Compiling LeafClinicWalkthrough LeafClinicApp.swift
+[6/14] Compiling LeafClinicPreviewHost main.swift
+[7/14] Emitting module LeafClinicPreviewHost
+[7/14] Write Objects.LinkFileList
+[8/14] Linking LeafClinicPreviewHost
+[9/14] Applying LeafClinicPreviewHost
+[11/14] Compiling LeafClinicWalkthroughTests LeafClinicStoreTests.swift
+[12/14] Emitting module LeafClinicWalkthroughTests
+[13/16] Emitting module LeafClinicWalkthroughPackageTests
+[14/16] Compiling LeafClinicWalkthroughPackageTests runner.swift
+[14/16] Write Objects.LinkFileList
+[15/16] Linking LeafClinicWalkthroughPackageTests
+Build complete! (7.72s)
+Test Suite 'All tests' started at 2026-07-08 22:35:52.847.
+Test Suite 'LeafClinicWalkthroughPackageTests.xctest' started at 2026-07-08 22:35:52.851.
+Test Suite 'LeafClinicStoreTests' started at 2026-07-08 22:35:52.851.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testCreateEditAndDeletePlantCase]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testCreateEditAndDeletePlantCase]' passed (0.006 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testLocalTriageIsEditableSkippableAndConfirmable]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testLocalTriageIsEditableSkippableAndConfirmable]' passed (0.000 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testMissingNicknameSurfacesRecoverableError]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testMissingNicknameSurfacesRecoverableError]' passed (0.000 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPersistenceSurvivesStoreReopen]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPersistenceSurvivesStoreReopen]' passed (0.001 seconds).
+Test Suite 'LeafClinicStoreTests' passed at 2026-07-08 22:35:52.859.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.008 (0.009) seconds
+Test Suite 'LeafClinicWalkthroughPackageTests.xctest' passed at 2026-07-08 22:35:52.859.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.008 (0.009) seconds
+Test Suite 'All tests' passed at 2026-07-08 22:35:52.859.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.008 (0.012) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

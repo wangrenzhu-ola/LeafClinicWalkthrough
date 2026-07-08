@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(StoreKit)
+import StoreKit
+#endif
 
 public enum SymptomType: String, Codable, CaseIterable, Identifiable, Sendable {
     case yellowEdges
@@ -147,6 +150,28 @@ public struct PremiumEntitlement: Codable, Equatable, Sendable {
         self.productIds = productIds
         self.storeKitUnavailableReason = storeKitUnavailableReason
     }
+}
+
+public struct PremiumStoreKitBoundary: Equatable, Sendable {
+    public let productIds: [String]
+    public let unavailableFallbackCopy: String
+
+    public init(
+        productIds: [String] = ["leafclinic.premium.monthly", "leafclinic.premium.yearly"],
+        unavailableFallbackCopy: String = "StoreKit products are not configured for this rough build. Premium remains unavailable until App Store Connect evidence is supplied."
+    ) {
+        self.productIds = productIds
+        self.unavailableFallbackCopy = unavailableFallbackCopy
+    }
+
+    public var blocker: String { "app_store_connect_iap_evidence_missing" }
+
+    #if canImport(StoreKit)
+    @available(iOS 15.0, macOS 12.0, *)
+    public func loadConfiguredProducts() async throws -> [Product] {
+        try await Product.products(for: productIds)
+    }
+    #endif
 }
 
 public struct PlantCase: Codable, Equatable, Identifiable, Sendable {
