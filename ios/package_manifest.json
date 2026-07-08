@@ -1,0 +1,12 @@
+{
+  "schema_version": "appfactory.ios_package_manifest.v1",
+  "app_name": "Leaf Clinic Walkthrough",
+  "bundle_id": "com.appfactory.leafclinicwalkthrough",
+  "platform": "iOS",
+  "minimum_ios": "17.0",
+  "implementation": "Native SwiftUI in Swift using Swift Package Manager and Xcode package schemes",
+  "localization": "en-US",
+  "privacy": "Plant photos and notes stay local by default; future cloud or Kimi route requires explicit opt-in.",
+  "premium_product_ids": ["leafclinic.premium.monthly", "leafclinic.premium.yearly"],
+  "app_store_connect_evidence": null
+}
