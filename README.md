@@ -13,6 +13,17 @@ Native SwiftUI rough app for a local plant leaf recovery walkthrough. The app le
 - `REQ-PREMIUM-001`: Premium route exposes StoreKit product IDs and an unavailable fallback until App Store Connect evidence exists.
 - `REQ-AI-001`: Local heuristic suggestions are editable, skippable, and confirmed before saving; no cloud AI or Kimi key is used.
 
+## v0.2 product + creative iteration
+
+This iteration targets the user pain of seeing a stressed leaf and not knowing what safe action to take tonight. It adds:
+
+- “Tonight’s Rescue Focus” on Home with one next action, one avoid-tonight guardrail, and a revisit cue.
+- Overcorrection guardrail copy in Triage before the user saves a plan.
+- Rescue rhythm insight on Recovery based on completed/skipped care steps.
+- Before/after revisit guidance that turns the user’s after-status into a calm next decision.
+
+See `Docs/next-version-product-creative-brief.md` for the product-design and creative-production rationale.
+
 ## Checks
 
 ```bash

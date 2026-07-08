@@ -69,6 +69,31 @@ final class LeafClinicStoreTests: XCTestCase {
         XCTAssertTrue(LocalTriageEngine.confidenceCopy(for: draft).contains("not a professional diagnosis"))
     }
 
+    func testRescueInsightNamesOneSafeNextActionAndAvoidsOvercorrection() throws {
+        let store = LeafClinicStore(persistence: try temporaryPersistence())
+        let plantCase = try store.createCase(from: LeafIntakeDraft(plantNickname: "Monstera", symptomType: .yellowEdges, severity: 0.68))
+        let firstStep = try XCTUnwrap(store.cases[0].careSteps.first)
+
+        try store.toggleStep(caseId: plantCase.id, stepId: firstStep.id)
+
+        let insight = try XCTUnwrap(store.primaryRescueInsight)
+        XCTAssertEqual(insight.plantNickname, "Monstera")
+        XCTAssertTrue(insight.nextActionTitle.contains("bright indirect light"))
+        XCTAssertTrue(insight.avoidActionTitle.contains("Avoid fertilizer"))
+        XCTAssertTrue(insight.rhythmCopy.contains("completed"))
+        XCTAssertGreaterThan(insight.pulseScore, 0)
+    }
+
+    func testRevisitGuidanceTurnsStatusIntoNextDecision() {
+        let watchGuidance = LocalTriageEngine.revisitGuidance(afterStatus: "Leaf is softer and more yellow", decision: .watch)
+        let recoveredGuidance = LocalTriageEngine.revisitGuidance(afterStatus: "Leaf looks firmer", decision: .recovered)
+        let guardrail = LocalTriageEngine.overcorrectionGuardrail(for: LeafIntakeDraft(symptomType: .spots))
+
+        XCTAssertTrue(watchGuidance.contains("compare the same leaf again"))
+        XCTAssertTrue(recoveredGuidance.contains("winning rhythm"))
+        XCTAssertTrue(guardrail.contains("Do not mist"))
+    }
+
     func testPremiumBoundaryUsesLiteralIAPBlockerUntilProductsExist() {
         let boundary = PremiumStoreKitBoundary()
 

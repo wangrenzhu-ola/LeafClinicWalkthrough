@@ -1,0 +1,51 @@
+{
+  "schema_version": "leafclinic.v02_iteration_report.v1",
+  "generated_at": "2026-07-08T15:20:47.071910+00:00",
+  "base_commit": "b5c48d23ff08edaf2d6be0bae43a4aa32e12db4e",
+  "objective": "product-design + creative-production iteration to solve the user pain of not knowing one safe next action for a stressed leaf",
+  "implemented": [
+    "Home Tonight\u2019s Rescue Focus card with next action, avoid-tonight guardrail, and revisit cue",
+    "Triage overcorrection guardrail before saving a care plan",
+    "Recovery rescue rhythm card from completed/skipped care steps",
+    "Revisit before/after guidance based on after-status and user decision",
+    "Product + creative brief documenting warm botanical clinic / field notebook direction"
+  ],
+  "source_refs": [
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Docs/next-version-product-creative-brief.md",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/Models.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LocalTriageEngine.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicStore.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Sources/LeafClinicWalkthrough/LeafClinicViews.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Tests/LeafClinicWalkthroughTests/LeafClinicStoreTests.swift",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/README.md"
+  ],
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/swift-test-v02-20260708231943.log",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/xcodebuild-v02-20260708231943.log",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-runtime-v02-20260708232007.log",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-v02-rescue-focus-20260708232007.png"
+  ],
+  "checks": [
+    {
+      "command": "swift test",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/swift-test-v02-20260708231943.log",
+      "summary": "Executed 7 tests, 0 failures"
+    },
+    {
+      "command": "xcodebuild -project LeafClinicWalkthrough.xcodeproj -scheme LeafClinicWalkthrough -configuration Debug -destination generic/platform=iOS Simulator build",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/xcodebuild-v02-20260708231943.log",
+      "summary": "BUILD SUCCEEDED"
+    },
+    {
+      "command": "simctl install/launch/io screenshot with seeded local case",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-v02-rescue-focus-20260708232007.png",
+      "summary": "Runtime screenshot shows Tonight\u2019s Rescue Focus"
+    }
+  ],
+  "known_blockers": [
+    "app_store_connect_iap_evidence_missing"
+  ]
+}

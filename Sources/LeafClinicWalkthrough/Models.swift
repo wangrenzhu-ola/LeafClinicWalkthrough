@@ -174,6 +174,40 @@ public struct PremiumStoreKitBoundary: Equatable, Sendable {
     #endif
 }
 
+public struct LeafRescueInsight: Equatable, Identifiable, Sendable {
+    public let id: UUID
+    public let caseId: UUID
+    public let plantNickname: String
+    public let pulseScore: Int
+    public let nextActionTitle: String
+    public let avoidActionTitle: String
+    public let reassuranceCopy: String
+    public let rhythmCopy: String
+    public let revisitCue: String
+
+    public init(
+        id: UUID = UUID(),
+        caseId: UUID,
+        plantNickname: String,
+        pulseScore: Int,
+        nextActionTitle: String,
+        avoidActionTitle: String,
+        reassuranceCopy: String,
+        rhythmCopy: String,
+        revisitCue: String
+    ) {
+        self.id = id
+        self.caseId = caseId
+        self.plantNickname = plantNickname
+        self.pulseScore = pulseScore
+        self.nextActionTitle = nextActionTitle
+        self.avoidActionTitle = avoidActionTitle
+        self.reassuranceCopy = reassuranceCopy
+        self.rhythmCopy = rhythmCopy
+        self.revisitCue = revisitCue
+    }
+}
+
 public struct PlantCase: Codable, Equatable, Identifiable, Sendable {
     public var id: UUID
     public var plantNickname: String

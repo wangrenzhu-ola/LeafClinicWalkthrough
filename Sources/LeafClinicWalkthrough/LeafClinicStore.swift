@@ -101,6 +101,15 @@ public final class LeafClinicStore: ObservableObject {
     public var activeCases: [PlantCase] { cases.filter { $0.status == .active || $0.status == .revisitDue } }
     public var recoveredCases: [PlantCase] { cases.filter { $0.status == .recovered } }
     public var revisitDueCases: [PlantCase] { cases.filter { $0.status == .revisitDue } }
+    public var rescueInsights: [LeafRescueInsight] {
+        activeCases
+            .sorted { lhs, rhs in
+                if lhs.status == rhs.status { return lhs.severity > rhs.severity }
+                return lhs.status == .revisitDue
+            }
+            .map(LocalTriageEngine.rescueInsight)
+    }
+    public var primaryRescueInsight: LeafRescueInsight? { rescueInsights.first }
 
     @discardableResult
     public func createCase(from draft: LeafIntakeDraft, editedSteps: [CareStep]? = nil) throws -> PlantCase {

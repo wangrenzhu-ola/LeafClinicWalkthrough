@@ -17,6 +17,7 @@ public struct LeafClinicAppRoot: View {
             NavigationStack {
                 ClinicHomeView(
                     cases: store.activeCases,
+                    rescueInsight: store.primaryRescueInsight,
                     errorMessage: store.lastErrorMessage,
                     onStart: {
                         draft = LeafIntakeDraft(plantNickname: "")
@@ -120,6 +121,7 @@ private enum LeafClinicTab: Hashable {
 
 private struct ClinicHomeView: View {
     let cases: [PlantCase]
+    let rescueInsight: LeafRescueInsight?
     let errorMessage: String?
     let onStart: () -> Void
     let onSelectCase: (PlantCase) -> Void
@@ -128,6 +130,9 @@ private struct ClinicHomeView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 LeafHeroCard(onStart: onStart)
+                if let rescueInsight {
+                    RescueFocusCard(insight: rescueInsight)
+                }
                 if let errorMessage {
                     ErrorBanner(message: errorMessage)
                 }
@@ -147,6 +152,65 @@ private struct ClinicHomeView: View {
         }
         .background(Color.leafBackground.ignoresSafeArea())
         .navigationTitle("Leaf Clinic")
+    }
+}
+
+private struct RescueFocusCard: View {
+    let insight: LeafRescueInsight
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .center, spacing: 14) {
+                SeverityRing(progress: Double(insight.pulseScore) / 100)
+                    .frame(width: 74, height: 74)
+                    .accessibilityLabel("Rescue pulse score \(insight.pulseScore) percent")
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Tonight’s Rescue Focus")
+                        .font(.headline)
+                        .foregroundStyle(Color.leafInk)
+                    Text(insight.plantNickname)
+                        .font(.title3.bold())
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.82)
+                    Text(insight.reassuranceCopy)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            Divider()
+            InsightLine(icon: "checkmark.seal.fill", title: "Do first", copy: insight.nextActionTitle, color: .leafAccent)
+            InsightLine(icon: "hand.raised.fill", title: "Avoid tonight", copy: insight.avoidActionTitle, color: .amberWarning)
+            InsightLine(icon: "calendar.badge.clock", title: "Revisit cue", copy: insight.revisitCue, color: .leafInk)
+        }
+        .padding(18)
+        .background(RoundedRectangle(cornerRadius: 26).fill(Color.leafCard))
+        .overlay(RoundedRectangle(cornerRadius: 26).stroke(Color.amberWarning.opacity(0.22)))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Tonight’s Rescue Focus for \(insight.plantNickname). Do first: \(insight.nextActionTitle). Avoid tonight: \(insight.avoidActionTitle)")
+    }
+}
+
+private struct InsightLine: View {
+    let icon: String
+    let title: String
+    let copy: String
+    let color: Color
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: icon)
+                .foregroundStyle(color)
+                .frame(width: 22)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.caption.bold())
+                    .textCase(.uppercase)
+                    .foregroundStyle(.secondary)
+                Text(copy)
+                    .font(.callout)
+                    .foregroundStyle(Color.leafInk)
+            }
+        }
     }
 }
 
@@ -283,6 +347,7 @@ private struct TriageResultView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(title: "Review before saving.", subtitle: LocalTriageEngine.confidenceCopy(for: draft))
+                OvercorrectionGuardrailCard(copy: LocalTriageEngine.overcorrectionGuardrail(for: draft))
                 HStack {
                     ForEach(LocalTriageEngine.reasonChips(for: draft), id: \.self) { chip in
                         Text(chip)
@@ -331,12 +396,38 @@ private struct TriageResultView: View {
     }
 }
 
+
+private struct OvercorrectionGuardrailCard: View {
+    let copy: String
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "exclamationmark.shield.fill")
+                .font(.title3)
+                .foregroundStyle(Color.amberWarning)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Overcorrection guardrail")
+                    .font(.headline)
+                    .foregroundStyle(Color.leafInk)
+                Text(copy)
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(16)
+        .background(RoundedRectangle(cornerRadius: 20).fill(Color.amberWarning.opacity(0.12)))
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.amberWarning.opacity(0.22)))
+        .accessibilityLabel("Overcorrection guardrail. \(copy)")
+    }
+}
+
 private struct RecoveryWalkthroughView: View {
     let plantCase: PlantCase
     @ObservedObject var store: LeafClinicStore
     let onRevisit: () -> Void
 
     var body: some View {
+        let insight = LocalTriageEngine.rescueInsight(for: plantCase)
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 18) {
@@ -353,6 +444,7 @@ private struct RecoveryWalkthroughView: View {
                             .foregroundStyle(Color.leafAccent)
                     }
                 }
+                RescueRhythmCard(insight: insight)
                 CaseDetailEditCard(plantCase: plantCase, store: store)
                     .id(plantCase.id)
                 ForEach(plantCase.careSteps) { step in
@@ -389,6 +481,43 @@ private struct RecoveryWalkthroughView: View {
         }
         .background(Color.leafBackground.ignoresSafeArea())
         .navigationTitle("Recovery")
+    }
+}
+
+
+private struct RescueRhythmCard: View {
+    let insight: LeafRescueInsight
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            SectionHeader(title: "Rescue rhythm", subtitle: insight.rhythmCopy)
+            HStack(spacing: 10) {
+                RhythmChip(label: "\(insight.pulseScore)% pulse", systemImage: "waveform.path.ecg")
+                RhythmChip(label: "One action first", systemImage: "1.circle")
+                RhythmChip(label: "Revisit before reset", systemImage: "arrow.triangle.2.circlepath")
+            }
+            Text(insight.revisitCue)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+        }
+        .padding(16)
+        .background(RoundedRectangle(cornerRadius: 22).fill(Color.leafCard.opacity(0.92)))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Rescue rhythm. \(insight.rhythmCopy). \(insight.revisitCue)")
+    }
+}
+
+private struct RhythmChip: View {
+    let label: String
+    let systemImage: String
+
+    var body: some View {
+        Label(label, systemImage: systemImage)
+            .font(.caption.bold())
+            .padding(.horizontal, 10)
+            .padding(.vertical, 7)
+            .background(Capsule().fill(Color.leafAccent.opacity(0.14)))
+            .foregroundStyle(Color.leafInk)
     }
 }
 
@@ -492,6 +621,7 @@ private struct RevisitCompareView: View {
                 Picker("Decision", selection: $decision) {
                     ForEach(RevisitDecision.allCases) { decision in Text(decision.label).tag(decision) }
                 }
+                RevisitGuidanceCard(guidance: LocalTriageEngine.revisitGuidance(afterStatus: afterStatus, decision: decision))
                 TextField("Next care note", text: $note, axis: .vertical)
                     .accessibilityLabel("Next care note")
                 Button("Save Revisit Note") {
@@ -501,6 +631,22 @@ private struct RevisitCompareView: View {
             }
         }
         .navigationTitle("Revisit Compare")
+    }
+}
+
+private struct RevisitGuidanceCard: View {
+    let guidance: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Label("Before/after read", systemImage: "leaf.arrow.triangle.circlepath")
+                .font(.headline)
+            Text(guidance)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 6)
+        .accessibilityLabel("Before and after guidance. \(guidance)")
     }
 }
 
