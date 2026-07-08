@@ -1,50 +1,39 @@
 {
   "schema_version": "appfactory.xcode_runtime_report.v1",
-  "generated_at": "2026-07-08T23:04:23+0800",
-  "status": "pass",
-  "command": "swift test && xcodebuild -project LeafClinicWalkthrough.xcodeproj -scheme LeafClinicWalkthrough -configuration Debug -destination generic/platform=iOS Simulator build && simctl install/launch/screenshot booted",
+  "generated_at": "2026-07-08T15:09:34.273287+00:00",
+  "command": "swift test && xcodebuild -project LeafClinicWalkthrough.xcodeproj -scheme LeafClinicWalkthrough -configuration Debug -destination generic/platform=iOS Simulator build && simctl install/launch/io screenshot booted",
   "exit_code": 0,
-  "xcode": [
-    "Xcode 26.6",
-    "Build version 17F113"
-  ],
+  "xcode": "Xcode 26.6\nBuild version 17F113",
   "xcodebuild": {
-    "log_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/xcodebuild-simulator-app-20260708230338.log",
+    "log_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/xcodebuild-simulator-app-20260708230423.log",
     "exit_code": 0,
     "success_marker": "** BUILD SUCCEEDED **"
   },
   "swift_test": {
     "log_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/swift-test-20260708150400.log",
     "exit_code": 0,
-    "summary": "Executed 5 tests, with 0 failures"
+    "success_marker": "Executed 5 tests, with 0 failures"
   },
   "simulator": {
-    "booted_readback": "== Devices ==\n-- iOS 26.4 --\n-- iOS 26.5 --\n    iPhone 17 Pro (93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA) (Booted)"
+    "booted_readback": "== Devices ==\n-- iOS 26.4 --\n-- iOS 26.5 --\n    iPhone 17 Pro (93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA) (Booted) \n    iPhone 17 (BBB7317F-76C6-4BD5-BF4B-EF6ABAEBA1F8) (Booted)"
   },
   "install": {
     "command": "xcrun simctl install booted <LeafClinicWalkthrough.app>",
-    "log_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-install-20260708230338.log",
     "exit_code": 0
   },
   "launch": {
     "command": "xcrun simctl launch booted com.appfactory.leafclinicwalkthrough",
-    "log_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-runtime-20260708230338.log",
-    "exit_code": 0
+    "exit_code": 0,
+    "runtime_log_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-runtime-20260708230729.log"
   },
   "runtime_readback_refs": [
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-runtime-20260708230338.png",
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-runtime-20260708230338.log"
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-runtime-20260708230729.log",
+    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-runtime-20260708230729.png"
   ],
+  "screenshot_ref": "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-runtime-20260708230729.png",
   "implementation_mode": "agent_native_build_loop",
   "generator_template_substitution_allowed": false,
   "blockers": [
     "app_store_connect_iap_evidence_missing"
-  ],
-  "readback_refs": [
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/leafclinic-runtime-20260708230338.png",
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/source_readback.json",
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/swift-test-20260708150400.log",
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/xcodebuild-simulator-app-20260708230338.log",
-    "/Users/wangrenzhu/work/LeafClinicWalkthrough/Evidence/sim-runtime-20260708230338.log"
   ]
 }
