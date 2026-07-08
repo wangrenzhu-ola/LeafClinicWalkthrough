@@ -17,7 +17,7 @@ Native SwiftUI rough app for a local plant leaf recovery walkthrough. The app le
 
 This iteration targets the user pain of seeing a stressed leaf and not knowing what safe action to take tonight. It adds:
 
-- “Tonight’s Rescue Focus” on Home with one next action, one avoid-tonight guardrail, and a revisit cue.
+- “Tonight’s Rescue Focus” on Home with one next action, one avoid-tonight guardrail, a revisit cue, and direct Open/Mark Done actions.
 - Overcorrection guardrail copy in Triage before the user saves a plan.
 - Rescue rhythm insight on Recovery based on completed/skipped care steps.
 - Before/after revisit guidance that turns the user’s after-status into a calm next decision.

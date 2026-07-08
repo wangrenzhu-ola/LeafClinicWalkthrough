@@ -14,11 +14,11 @@ Leaf Clinic Walkthrough v0.2 should reduce the plant owner’s most painful mome
 - **Avoid list:** no fake diagnosis, no online expert claims, no purple AI assistant gradient, no stock plant shelf look.
 
 ## Implemented v0.2 slice
-- Home rescue focus card for the most urgent active case.
+- Home rescue focus card for the most urgent active case, with direct “Open Rescue Plan” and “Mark Done” actions.
 - Triage overcorrection guardrail copy before save.
 - Recovery rhythm insight from completed/skipped care steps.
 - Revisit comparison guidance that turns after-status into a clear next decision.
 
 ## Evidence plan
-- Unit tests cover rescue insight generation and revisit comparison guidance.
+- Unit tests cover rescue insight generation, home quick-complete behavior, and revisit comparison guidance.
 - SwiftUI runtime screenshot should show the home rescue focus and botanical clinic direction.

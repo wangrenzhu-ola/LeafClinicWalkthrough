@@ -201,6 +201,25 @@ public final class LeafClinicStore: ObservableObject {
         try persistOrSurfaceError()
     }
 
+    @discardableResult
+    public func completeNextRescueStep(caseId: UUID) throws -> CareStep? {
+        guard let caseIndex = cases.firstIndex(where: { $0.id == caseId }) else {
+            lastErrorMessage = LeafClinicError.caseNotFound.errorDescription
+            throw LeafClinicError.caseNotFound
+        }
+        guard let stepIndex = cases[caseIndex].careSteps
+            .enumerated()
+            .filter({ $0.element.completedAt == nil && !$0.element.isSkipped })
+            .sorted(by: { $0.element.dueDay < $1.element.dueDay })
+            .first?.offset else {
+            return nil
+        }
+        cases[caseIndex].careSteps[stepIndex].completedAt = Date()
+        let completedStep = cases[caseIndex].careSteps[stepIndex]
+        try persistOrSurfaceError()
+        return completedStep
+    }
+
     public func addRevisitNote(caseId: UUID, afterStatus: String, decision: RevisitDecision, note: String) throws {
         guard let index = cases.firstIndex(where: { $0.id == caseId }) else {
             lastErrorMessage = LeafClinicError.caseNotFound.errorDescription

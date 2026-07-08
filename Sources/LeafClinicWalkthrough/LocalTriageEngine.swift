@@ -46,6 +46,7 @@ public enum LocalTriageEngine {
 
         return LeafRescueInsight(
             caseId: plantCase.id,
+            nextStepId: nextStep?.id,
             plantNickname: plantCase.plantNickname,
             pulseScore: pulseScore,
             nextActionTitle: nextStep?.actionTitle ?? "Record one calm leaf observation",

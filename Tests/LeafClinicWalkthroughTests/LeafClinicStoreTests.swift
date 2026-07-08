@@ -84,6 +84,20 @@ final class LeafClinicStoreTests: XCTestCase {
         XCTAssertGreaterThan(insight.pulseScore, 0)
     }
 
+    func testHomeRescueActionCompletesNextUnfinishedStep() throws {
+        let store = LeafClinicStore(persistence: try temporaryPersistence())
+        let plantCase = try store.createCase(from: LeafIntakeDraft(plantNickname: "Pothos", symptomType: .drooping, severity: 0.55))
+        let firstInsight = try XCTUnwrap(store.primaryRescueInsight)
+
+        let completed = try XCTUnwrap(try store.completeNextRescueStep(caseId: plantCase.id))
+        let secondInsight = try XCTUnwrap(store.primaryRescueInsight)
+
+        XCTAssertEqual(completed.id, firstInsight.nextStepId)
+        XCTAssertNotEqual(firstInsight.nextStepId, secondInsight.nextStepId)
+        XCTAssertTrue(store.cases[0].careSteps[0].completedAt != nil)
+        XCTAssertTrue(secondInsight.rhythmCopy.contains("completed"))
+    }
+
     func testRevisitGuidanceTurnsStatusIntoNextDecision() {
         let watchGuidance = LocalTriageEngine.revisitGuidance(afterStatus: "Leaf is softer and more yellow", decision: .watch)
         let recoveredGuidance = LocalTriageEngine.revisitGuidance(afterStatus: "Leaf looks firmer", decision: .recovered)

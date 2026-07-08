@@ -1,0 +1,39 @@
+Building for debugging...
+[0/5] Write sources
+[1/5] Write swift-version--58304C5D6DBC2206.txt
+[3/7] Compiling LeafClinicWalkthrough LeafClinicViews.swift
+[4/7] Emitting module LeafClinicWalkthrough
+[4/9] Write Objects.LinkFileList
+[6/9] Linking LeafClinicPreviewHost
+[6/9] Linking LeafClinicWalkthroughPackageTests
+[8/9] Applying LeafClinicPreviewHost
+Build complete! (1.87s)
+Test Suite 'All tests' started at 2026-07-08 23:28:36.255.
+Test Suite 'LeafClinicWalkthroughPackageTests.xctest' started at 2026-07-08 23:28:36.256.
+Test Suite 'LeafClinicStoreTests' started at 2026-07-08 23:28:36.256.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testCreateEditAndDeletePlantCase]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testCreateEditAndDeletePlantCase]' passed (0.003 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testHomeRescueActionCompletesNextUnfinishedStep]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testHomeRescueActionCompletesNextUnfinishedStep]' passed (0.001 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testLocalTriageIsEditableSkippableAndConfirmable]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testLocalTriageIsEditableSkippableAndConfirmable]' passed (0.000 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testMissingNicknameSurfacesRecoverableError]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testMissingNicknameSurfacesRecoverableError]' passed (0.000 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPersistenceSurvivesStoreReopen]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPersistenceSurvivesStoreReopen]' passed (0.001 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPremiumBoundaryUsesLiteralIAPBlockerUntilProductsExist]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testPremiumBoundaryUsesLiteralIAPBlockerUntilProductsExist]' passed (0.000 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testRescueInsightNamesOneSafeNextActionAndAvoidsOvercorrection]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testRescueInsightNamesOneSafeNextActionAndAvoidsOvercorrection]' passed (0.001 seconds).
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testRevisitGuidanceTurnsStatusIntoNextDecision]' started.
+Test Case '-[LeafClinicWalkthroughTests.LeafClinicStoreTests testRevisitGuidanceTurnsStatusIntoNextDecision]' passed (0.000 seconds).
+Test Suite 'LeafClinicStoreTests' passed at 2026-07-08 23:28:36.263.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.007) seconds
+Test Suite 'LeafClinicWalkthroughPackageTests.xctest' passed at 2026-07-08 23:28:36.263.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.007) seconds
+Test Suite 'All tests' passed at 2026-07-08 23:28:36.263.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.008) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

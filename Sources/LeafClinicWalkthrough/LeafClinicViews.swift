@@ -24,6 +24,15 @@ public struct LeafClinicAppRoot: View {
                         draftSteps = []
                         selectedTab = .intake
                     },
+                    onOpenRescue: { caseId in
+                        selectedCaseId = caseId
+                        selectedTab = .walkthrough
+                    },
+                    onCompleteRescueStep: { caseId in
+                        do {
+                            _ = try store.completeNextRescueStep(caseId: caseId)
+                        } catch { }
+                    },
                     onSelectCase: { plantCase in
                         selectedCaseId = plantCase.id
                         selectedTab = .walkthrough
@@ -124,6 +133,8 @@ private struct ClinicHomeView: View {
     let rescueInsight: LeafRescueInsight?
     let errorMessage: String?
     let onStart: () -> Void
+    let onOpenRescue: (PlantCase.ID) -> Void
+    let onCompleteRescueStep: (PlantCase.ID) -> Void
     let onSelectCase: (PlantCase) -> Void
 
     var body: some View {
@@ -131,7 +142,11 @@ private struct ClinicHomeView: View {
             VStack(alignment: .leading, spacing: 20) {
                 LeafHeroCard(onStart: onStart)
                 if let rescueInsight {
-                    RescueFocusCard(insight: rescueInsight)
+                    RescueFocusCard(
+                        insight: rescueInsight,
+                        onOpen: { onOpenRescue(rescueInsight.caseId) },
+                        onComplete: { onCompleteRescueStep(rescueInsight.caseId) }
+                    )
                 }
                 if let errorMessage {
                     ErrorBanner(message: errorMessage)
@@ -157,6 +172,8 @@ private struct ClinicHomeView: View {
 
 private struct RescueFocusCard: View {
     let insight: LeafRescueInsight
+    let onOpen: () -> Void
+    let onComplete: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -177,6 +194,19 @@ private struct RescueFocusCard: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            HStack(spacing: 10) {
+                Button("Open Plan", action: onOpen)
+                    .buttonStyle(.borderedProminent)
+                    .accessibilityLabel("Open rescue plan for \(insight.plantNickname)")
+                Button {
+                    onComplete()
+                } label: {
+                    Label("Mark Done", systemImage: "checkmark.circle")
+                }
+                .buttonStyle(.bordered)
+                .disabled(insight.nextStepId == nil)
+                .accessibilityLabel("Mark do first action done")
+            }
             Divider()
             InsightLine(icon: "checkmark.seal.fill", title: "Do first", copy: insight.nextActionTitle, color: .leafAccent)
             InsightLine(icon: "hand.raised.fill", title: "Avoid tonight", copy: insight.avoidActionTitle, color: .amberWarning)
@@ -185,7 +215,7 @@ private struct RescueFocusCard: View {
         .padding(18)
         .background(RoundedRectangle(cornerRadius: 26).fill(Color.leafCard))
         .overlay(RoundedRectangle(cornerRadius: 26).stroke(Color.amberWarning.opacity(0.22)))
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .contain)
         .accessibilityLabel("Tonight’s Rescue Focus for \(insight.plantNickname). Do first: \(insight.nextActionTitle). Avoid tonight: \(insight.avoidActionTitle)")
     }
 }

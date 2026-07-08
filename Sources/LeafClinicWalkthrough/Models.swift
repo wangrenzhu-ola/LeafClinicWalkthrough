@@ -177,6 +177,7 @@ public struct PremiumStoreKitBoundary: Equatable, Sendable {
 public struct LeafRescueInsight: Equatable, Identifiable, Sendable {
     public let id: UUID
     public let caseId: UUID
+    public let nextStepId: UUID?
     public let plantNickname: String
     public let pulseScore: Int
     public let nextActionTitle: String
@@ -188,6 +189,7 @@ public struct LeafRescueInsight: Equatable, Identifiable, Sendable {
     public init(
         id: UUID = UUID(),
         caseId: UUID,
+        nextStepId: UUID?,
         plantNickname: String,
         pulseScore: Int,
         nextActionTitle: String,
@@ -198,6 +200,7 @@ public struct LeafRescueInsight: Equatable, Identifiable, Sendable {
     ) {
         self.id = id
         self.caseId = caseId
+        self.nextStepId = nextStepId
         self.plantNickname = plantNickname
         self.pulseScore = pulseScore
         self.nextActionTitle = nextActionTitle
